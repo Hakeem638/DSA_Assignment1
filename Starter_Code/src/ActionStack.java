@@ -8,18 +8,26 @@ public class ActionStack {
     }
 
     public boolean isEmpty() {
-      
-        return false;
+        return top == -1;
     }
 
     public boolean push(ActionRecord action) {
-        // TODO 10: Push action if there is space; return false if stack is full.
-        return false;
+
+        if (top == data.length - 1) return false; // checks if the stack is not full.
+
+        data[++top] = action; // pre-increments top before the insert, if top was 2, it becomes 3 then the action is inserted.
+        
+        return true;
     }
 
     public ActionRecord pop() {
-        // TODO 11: Remove and return the most recent action; return null if empty.
-        return null;
+    
+        if (isEmpty()) return null;
+        ActionRecord item = data[top];
+        data[top] = null;
+        top --;
+        
+        return item;
     }
 
     public ActionRecord peek() {
