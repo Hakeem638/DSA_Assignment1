@@ -42,6 +42,25 @@ public class GhanaServiceCentre {
         // Rule 3: Else add to normalQueue.
         // Rule 4: If any bounded structure is full, increase overflowCount.
         // Rule 5: Push an ActionRecord for successful admissions.
+
+        if (request.needsCorrection) {
+            if (correctionDeque.isFull()) {
+                overflowCount++;
+            } else {
+                correctionDeque.addRear(request);
+                actions.push(new ActionRecord("ADMIT_CORRECTION", request));
+            }
+        } else if (request.urgencyLevel >= 4) {
+            urgentQueue.add(request);
+            actions.push(new ActionRecord("ADMIT_URGENT", request));
+        } else {
+            if (normalQueue.isFull()) {
+                overflowCount++;
+            } else {
+                normalQueue.enqueue(request);
+                actions.push(new ActionRecord("ADMIT_NORMAL", request));
+            }
+        }
     }
 
     public Request serveNextRequest() {
