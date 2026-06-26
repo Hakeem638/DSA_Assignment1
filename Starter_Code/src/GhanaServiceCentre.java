@@ -38,7 +38,6 @@ public class GhanaServiceCentre {
     public void admitRequest(Request request) {
         // TODO 20: Route request into the correct structure.
         // Rule 1: If needsCorrection is true, add to correctionDeque.
-        
         // Rule 2: Else if urgencyLevel >= 4, add to urgentQueue.
         // Rule 3: Else add to normalQueue.
         // Rule 4: If any bounded structure is full, increase overflowCount.
