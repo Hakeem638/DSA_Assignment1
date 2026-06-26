@@ -12,13 +12,11 @@ public class CorrectionDeque {
     }
 
     public boolean isFull() {
-        // TODO 13: Return true when size equals capacity.
         return size == data.length;
     }
 
     public boolean isEmpty() {
-        // TODO 14: Return true when size is zero.
-        return false;
+        return size == 0;
     }
 
     public boolean addRear(Request request) {
@@ -27,9 +25,11 @@ public class CorrectionDeque {
     }
 
     public boolean addFront(Request request) {
-        // TODO 16: Add a corrected urgent request to the front using modulo arithmetic.
-        // Hint: front = (front - 1 + data.length) % data.length
-        return false;
+        if (isFull()) return false;
+        rear = (rear + 1) % data.length;  // move rear forward, wrap if needed
+        data[rear] = request;              // insert at new rear
+        size++;
+        return true;
     }
 
     public Request removeFront() {
