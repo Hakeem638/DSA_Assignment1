@@ -8,7 +8,7 @@ public class ActionStack {
     }
 
     public boolean isEmpty() {
-        // TODO 9: Return true when top is -1.
+      
         return false;
     }
 
