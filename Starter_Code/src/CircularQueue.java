@@ -20,10 +20,7 @@ public class CircularQueue {
     }
 
     public boolean enqueue(Request request) {
-        if (isFull()) {
-            return false;
-        }
-
+        if (isFull()) return false;
         rear = (rear + 1) % data.length;
         data[rear] = request;
         size++;

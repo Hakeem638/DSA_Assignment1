@@ -46,7 +46,6 @@ public class CorrectionDeque {
     }
 
     public Request removeRear() {
-        // TODO 18: Remove and return the rear request.
         if (isEmpty()) return null;
 
         Request item = data[rear];
