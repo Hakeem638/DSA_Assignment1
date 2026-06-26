@@ -31,10 +31,7 @@ public class CircularQueue {
     }
 
     public Request dequeue() {
-        if (isEmpty()) {
-            return null;
-        }
-
+        if (isEmpty()) return null;
         Request item = data[front];
         data[front] = null;
         front = (front + 1) % data.length;
@@ -43,9 +40,7 @@ public class CircularQueue {
     }
 
     public Request peek() {
-        if (isEmpty()) {
-            return null;
-        }
+        if (isEmpty()) return null;
         return data[front];
     }
 
