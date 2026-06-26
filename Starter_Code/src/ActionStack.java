@@ -23,9 +23,9 @@ public class ActionStack {
     public ActionRecord pop() {
         if (isEmpty()) return null;
 
-        ActionRecord item = data[top];
-        data[top] = null;
-        top --;
+        ActionRecord item = data[top]; // stores item 
+        data[top] = null; // cleans up what is at top
+        top --; // decrements top to point at the item below the popped item
         
         return item;
     }
