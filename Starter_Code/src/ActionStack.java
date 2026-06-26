@@ -21,8 +21,8 @@ public class ActionStack {
     }
 
     public ActionRecord pop() {
-    
         if (isEmpty()) return null;
+
         ActionRecord item = data[top];
         data[top] = null;
         top --;
@@ -31,8 +31,9 @@ public class ActionStack {
     }
 
     public ActionRecord peek() {
-        // TODO 12: Return the top action without removing it.
-        return null;
+       if (isEmpty()) return null;
+
+       return data[top];
     }
 
     public int size() {
