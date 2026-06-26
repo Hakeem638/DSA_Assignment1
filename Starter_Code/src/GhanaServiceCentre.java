@@ -31,12 +31,14 @@ public class GhanaServiceCentre {
         // Required minimum: urgencyLevel must matter most.
         // Suggested formula:
         // (urgencyLevel * 10) + urgencyBonus - estimatedMinutes + small arrival fairness adjustment
-        return 0;
+        return (request.urgencyLevel * 10) + this.urgencyBonus - request.estimatedMinutes + (100 - request.arrivalOrder);
+
     }
 
     public void admitRequest(Request request) {
         // TODO 20: Route request into the correct structure.
         // Rule 1: If needsCorrection is true, add to correctionDeque.
+        
         // Rule 2: Else if urgencyLevel >= 4, add to urgentQueue.
         // Rule 3: Else add to normalQueue.
         // Rule 4: If any bounded structure is full, increase overflowCount.
