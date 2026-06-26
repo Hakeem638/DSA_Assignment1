@@ -13,7 +13,7 @@ public class CorrectionDeque {
 
     public boolean isFull() {
         // TODO 13: Return true when size equals capacity.
-        return false;
+        return size == data.length;
     }
 
     public boolean isEmpty() {
