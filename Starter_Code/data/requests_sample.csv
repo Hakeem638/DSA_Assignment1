@@ -1,0 +1,13 @@
+requestId,arrivalOrder,location,serviceType,urgencyLevel,estimatedMinutes,needsCorrection,notes
+REQ001,1,UG Shuttle Stop,SHUTTLE_BOARDING,2,4,false,Normal shuttle boarding
+REQ002,2,UG Clinic,CLINIC_TRIAGE,5,12,false,High fever case
+REQ003,3,ECG Vendor,ECG_TOKEN,3,7,false,Prepaid token purchase
+REQ004,4,Ghana Card Desk,GHANA_CARD_CORRECTION,2,10,true,Incomplete document
+REQ005,5,Mobile Money Agent,MOBILE_MONEY_DISPUTE,4,9,false,Failed transaction dispute
+REQ006,6,UG Helpdesk,STUDENT_HELPDESK,1,5,false,Password reset
+REQ007,7,Bus Terminal,BUS_TERMINAL_TICKET,2,6,false,Madina to Kumasi inquiry
+REQ008,8,UG Clinic,CLINIC_TRIAGE,4,15,false,Injury case
+REQ009,9,Ghana Card Desk,GHANA_CARD_CORRECTION,1,8,true,Name spelling correction
+REQ010,10,ECG Vendor,ECG_TOKEN,2,6,false,Meter top-up
+REQ011,11,Bank Hall,BANKING,3,10,false,ATM card issue
+REQ012,12,Faculty Office,STUDENT_HELPDESK,2,6,true,Missing course registration slip
