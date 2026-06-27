@@ -11,11 +11,11 @@ public class GhanaServiceSimulator {
         }
 
         // TODO 25: Replace these example values with values from your index-number rules.
-        int normalCapacity = 10;
-        int correctionCapacity = 6;
-        int urgencyBonus = 1;
-        int serviceSteps = 20;
-
+        int normalCapacity = 11;      // 5 + last digit (6)
+        int correctionCapacity = 7;   // 4 + second-last digit (3)
+        int urgencyBonus = 0;         // last digit mod 3 = 6 mod 3 = 0
+        int serviceSteps = 23;        // 20 + second-last digit (3)
+        
         GhanaServiceCentre centre = new GhanaServiceCentre(normalCapacity, correctionCapacity, urgencyBonus);
         List<Request> requests = loadRequests(args[0]);
 
