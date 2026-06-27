@@ -1,13 +1,37 @@
 requestId,arrivalOrder,location,serviceType,urgencyLevel,estimatedMinutes,needsCorrection,notes
-REQ001,1,UG Shuttle Stop,SHUTTLE_BOARDING,2,4,false,Normal shuttle boarding
-REQ002,2,UG Clinic,CLINIC_TRIAGE,5,12,false,High fever case
-REQ003,3,ECG Vendor,ECG_TOKEN,3,7,false,Prepaid token purchase
-REQ004,4,Ghana Card Desk,GHANA_CARD_CORRECTION,2,10,true,Incomplete document
-REQ005,5,Mobile Money Agent,MOBILE_MONEY_DISPUTE,4,9,false,Failed transaction dispute
-REQ006,6,UG Helpdesk,STUDENT_HELPDESK,1,5,false,Password reset
-REQ007,7,Bus Terminal,BUS_TERMINAL_TICKET,2,6,false,Madina to Kumasi inquiry
-REQ008,8,UG Clinic,CLINIC_TRIAGE,4,15,false,Injury case
-REQ009,9,Ghana Card Desk,GHANA_CARD_CORRECTION,1,8,true,Name spelling correction
-REQ010,10,ECG Vendor,ECG_TOKEN,2,6,false,Meter top-up
-REQ011,11,Bank Hall,BANKING,3,10,false,ATM card issue
-REQ012,12,Faculty Office,STUDENT_HELPDESK,2,6,true,Missing course registration slip
+
+REQ001,1,UG Clinic,CLINIC_TRIAGE,2,10,false,Mild headache complaint
+REQ002,2,UG Clinic,CLINIC_TRIAGE,5,20,false,Severe chest pain emergency
+REQ003,3,UG Clinic,CLINIC_TRIAGE,1,8,false,Routine blood pressure check
+REQ004,4,UG Clinic,CLINIC_TRIAGE,3,12,false,Persistent cough consultation
+REQ005,5,UG Clinic,CLINIC_TRIAGE,4,15,false,High fever with chills
+REQ006,6,UG Clinic,CLINIC_TRIAGE,2,9,true,Missing student health form
+REQ007,7,UG Clinic,CLINIC_TRIAGE,1,6,false,Routine malaria test request
+REQ008,8,UG Clinic,CLINIC_TRIAGE,5,25,false,Unconscious patient brought in
+REQ009,9,UG Clinic,CLINIC_TRIAGE,3,11,false,Stomach pain consultation
+REQ010,10,UG Clinic,CLINIC_TRIAGE,2,8,true,Incomplete insurance card details
+REQ011,11,UG Clinic,CLINIC_TRIAGE,4,18,false,Severe allergic reaction
+REQ012,12,UG Clinic,CLINIC_TRIAGE,1,7,false,Eye irritation check
+REQ013,13,UG Clinic,CLINIC_TRIAGE,2,10,false,Mild back pain complaint
+REQ014,14,UG Clinic,CLINIC_TRIAGE,5,30,false,Suspected appendicitis
+REQ015,15,UG Clinic,CLINIC_TRIAGE,3,14,true,Wrong date on referral letter
+REQ016,16,UG Clinic,CLINIC_TRIAGE,2,9,false,Routine weight and height check
+REQ017,17,UG Clinic,CLINIC_TRIAGE,4,20,false,High blood pressure episode
+REQ018,18,UG Clinic,CLINIC_TRIAGE,1,5,false,Minor cut requiring dressing
+REQ019,19,UG Clinic,CLINIC_TRIAGE,3,12,false,Recurring migraine consultation
+REQ020,20,UG Clinic,CLINIC_TRIAGE,2,8,true,Missing previous prescription slip
+REQ021,21,UG Clinic,CLINIC_TRIAGE,5,22,false,Seizure episode reported
+REQ022,22,UG Clinic,CLINIC_TRIAGE,1,6,false,Routine typhoid test request
+REQ023,23,UG Clinic,CLINIC_TRIAGE,3,13,false,Skin rash consultation
+REQ024,24,UG Clinic,CLINIC_TRIAGE,4,17,false,Suspected malaria with high fever
+REQ025,25,UG Clinic,CLINIC_TRIAGE,2,9,false,Mild ankle sprain
+REQ026,26,UG Clinic,CLINIC_TRIAGE,1,7,true,Incomplete lab request form
+REQ027,27,UG Clinic,CLINIC_TRIAGE,3,11,false,Sore throat and tonsils check
+REQ028,28,UG Clinic,CLINIC_TRIAGE,5,28,false,Severe difficulty breathing
+REQ029,29,UG Clinic,CLINIC_TRIAGE,2,10,false,Routine dental pain referral
+REQ030,30,UG Clinic,CLINIC_TRIAGE,4,16,false,Diabetic patient glucose check
+REQ031,31,UG Clinic,CLINIC_TRIAGE,1,6,false,Mild nausea complaint
+REQ032,32,UG Clinic,CLINIC_TRIAGE,3,12,true,Wrong patient name on form
+REQ033,33,UG Clinic,CLINIC_TRIAGE,2,8,false,Routine hepatitis B screening
+REQ034,34,UG Clinic,CLINIC_TRIAGE,4,19,false,Acute lower abdominal pain
+REQ035,35,UG Clinic,CLINIC_TRIAGE,1,5,false,Minor burn requiring dressing
