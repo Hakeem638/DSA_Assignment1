@@ -1,3 +1,4 @@
+import java.awt.Desktop;
 import java.util.PriorityQueue;
 
 public class GhanaServiceCentre {
@@ -67,7 +68,41 @@ public class GhanaServiceCentre {
         // TODO 21: Serve urgentQueue first, then correctionDeque, then normalQueue.
         // TODO 22: Update served counters and totalEstimatedMinutesServed.
         // TODO 23: Push a SERVE action onto the stack.
-        return null;
+
+        Request served = null;
+        if (!urgentQueue.isEmpty()) {
+            urgentQueue.poll();
+            // update urgentServed and servedCount
+            urgentServed++;
+            servedCount++;
+            // update totalEstimatedMinutesServed
+            totalEstimatedMinutesServed++;
+
+        } else if (!correctionDeque.isEmpty()) {
+            // remove from correctionDeque
+            correctionDeque.removeFront();
+            // update correctionServed and servedCount
+            correctionServed++;
+            servedCount++;
+            // update totalEstimatedMinutesServed
+            totalEstimatedMinutesServed++;
+
+        } else if (!normalQueue.isEmpty()) {
+            // remove from normalQueue
+            normalQueue.dequeue();
+            // update normalServed and servedCount
+            normalServed++;
+            servedCount++;
+            // update totalEstimatedMinutesServed
+            totalEstimatedMinutesServed++;
+        }
+
+        if (served != null) {
+            // push SERVE ActionRecord onto stack
+            actions.push(new ActionRecord("SERVE_ACTION", request));
+        }
+
+        return served;
     }
 
     public void undoLastAction() {
