@@ -65,7 +65,7 @@ All custom structures use **modulo arithmetic** to wrap pointers circularly with
 
 ## Personalised Parameters
 
-Parameters are derived from Student ID **22046736**:
+Parameters are derived from Student ID **------36**:
 
 | Parameter | Derivation | Value |
 |---|---|---|
@@ -123,19 +123,19 @@ javac *.java
 
 **Step 3 — Run the simulator with the CSV dataset:**
 ```bash
-java GhanaServiceSimulator ../data/requests.csv
+java GhanaServiceSimulator ../data/requests_sample.csv
 ```
 
 **To clean compiled files and recompile fresh (recommended after any edits):**
 
 On Windows (PowerShell):
 ```powershell
-Remove-Item *.class; javac *.java; java GhanaServiceSimulator ../data/requests.csv
+Remove-Item *.class; javac *.java; java GhanaServiceSimulator ../data/requests_sample.csv
 ```
 
 On macOS/Linux:
 ```bash
-rm *.class && javac *.java && java GhanaServiceSimulator ../data/requests.csv
+rm *.class && javac *.java && java GhanaServiceSimulator ../data/requests_sample.csv
 ```
 
 ---
