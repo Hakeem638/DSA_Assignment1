@@ -21,7 +21,7 @@ public class CorrectionDeque {
 
     public boolean addRear(Request request) {
         if (isFull()) return false;
-        rear = (rear + 1) % data.length;    // mpove rear forward, wrap if needed
+        rear = (rear + 1) % data.length;    // move rear forward, wrap if needed
         data[rear] = request;       // insert at new rear
         size++;
         return true;
