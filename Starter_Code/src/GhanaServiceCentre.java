@@ -1,4 +1,3 @@
-import java.awt.Desktop;
 import java.util.PriorityQueue;
 
 public class GhanaServiceCentre {
@@ -71,35 +70,35 @@ public class GhanaServiceCentre {
 
         Request served = null;
         if (!urgentQueue.isEmpty()) {
-            urgentQueue.poll();
+            served = urgentQueue.poll();
             // update urgentServed and servedCount
             urgentServed++;
             servedCount++;
             // update totalEstimatedMinutesServed
-            totalEstimatedMinutesServed++;
+            totalEstimatedMinutesServed =+ served.estimatedMinutes;
 
         } else if (!correctionDeque.isEmpty()) {
             // remove from correctionDeque
-            correctionDeque.removeFront();
+            served = correctionDeque.removeFront();
             // update correctionServed and servedCount
             correctionServed++;
             servedCount++;
             // update totalEstimatedMinutesServed
-            totalEstimatedMinutesServed++;
+            totalEstimatedMinutesServed += served.estimatedMinutes;
 
         } else if (!normalQueue.isEmpty()) {
             // remove from normalQueue
-            normalQueue.dequeue();
+           served = normalQueue.dequeue();
             // update normalServed and servedCount
             normalServed++;
             servedCount++;
             // update totalEstimatedMinutesServed
-            totalEstimatedMinutesServed++;
+            totalEstimatedMinutesServed += served.estimatedMinutes;
         }
 
         if (served != null) {
             // push SERVE ActionRecord onto stack
-            actions.push(new ActionRecord("SERVE_ACTION", request));
+            actions.push(new ActionRecord("SERVE", served));
         }
 
         return served;
@@ -111,6 +110,26 @@ public class GhanaServiceCentre {
         // - If the last action was SERVE, re-admit the request using admitRequest(request).
         // - If the last action was an admission, explain in your report how you handled or limited undo.
         // Stronger solution: remove the exact request from the structure it entered.
+
+        if (actions.isEmpty()) {
+            System.out.println("Nothing to undo.");
+        }
+
+        ActionRecord record = actions.pop();
+
+        if (record.actionType.equals("SERVE")) {
+            admitRequest(record.request);
+             System.out.println("Undo succesful: " + record.request + " re-admitted.");
+             
+        } else if (record.actionType.equals("ADMIT_NORMAL")) {
+             System.out.println("Undo limited: cannot remove " + record.request + " from normal queue.");
+
+        } else if (record.actionType.equals("ADMIT_URGENT")) {
+             System.out.println("Undo limited: cannot remove " + record.request + " from urgent queue.");
+
+        } else if (record.actionType.equals("ADMIT_CORRECTION")) {
+             System.out.println("Undo limited: cannot remove " + record.request + " from correction deque.");
+        } 
     }
 
     public void printReport() {
