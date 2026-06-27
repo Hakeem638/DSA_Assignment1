@@ -15,7 +15,6 @@ public class GhanaServiceSimulator {
         int correctionCapacity = 7;   // 4 + second-last digit (3)
         int urgencyBonus = 0;         // last digit mod 3 = 6 mod 3 = 0
         int serviceSteps = 23;        // 20 + second-last digit (3)
-        
         GhanaServiceCentre centre = new GhanaServiceCentre(normalCapacity, correctionCapacity, urgencyBonus);
         List<Request> requests = loadRequests(args[0]);
 

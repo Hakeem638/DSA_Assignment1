@@ -75,7 +75,7 @@ public class GhanaServiceCentre {
             urgentServed++;
             servedCount++;
             // update totalEstimatedMinutesServed
-            totalEstimatedMinutesServed =+ served.estimatedMinutes;
+            totalEstimatedMinutesServed += served.estimatedMinutes;
 
         } else if (!correctionDeque.isEmpty()) {
             // remove from correctionDeque
