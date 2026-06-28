@@ -8,8 +8,8 @@ public class Request {
     public final boolean needsCorrection;
     public final String notes;
 
-    public Request(String requestId, int arrivalOrder, String location, String serviceType,
-                   int urgencyLevel, int estimatedMinutes, boolean needsCorrection, String notes) {
+    public Request(String requestId, int arrivalOrder, String location, String serviceType, int urgencyLevel, int estimatedMinutes, boolean needsCorrection, String notes) {
+        
         this.requestId = requestId;
         this.arrivalOrder = arrivalOrder;
         this.location = location;
